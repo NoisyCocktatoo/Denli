@@ -1,0 +1,396 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App{
+    display: flex;
+    background: url('./background1.png');
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    width: 70vw;
+    background: rgba(21, 19, 19, 0.5);
+    box-shadow: 2px 7px 10px #110b0b;
+    animation: first-load 900ms ease-in-out, fade-in 900ms ease-in-out;
+}
+
+.View{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    animation: reveal 300ms ease-in-out, reveal-2 600ms ease-in-out;
+    animation-delay: 1s;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+}
+
+.View h1{
+    color: #d9d9d9;
+    font-size: 50px;
+}
+
+.MainContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    position: relative;
+    isolation: isolate;
+}
+
+.MainContent::after{
+    content: '';
+    background: url('./assets/background3.jpg');
+    opacity: 0.6;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+
+.Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    animation: reveal 300ms ease-in-out, reveal-2 600ms ease-in-out;
+    animation-delay: 1s;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+}
+
+.Header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.Header h1{
+    color: #d9d9d9;
+    font-size: 30px;
+}
+
+.UIDivider{
+    padding: 3px;
+    background: #d9d9d9;
+    width: 85%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 2px;
+    margin-bottom: 30px;
+}
+
+.label{
+    font-size: 25px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.input{
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 30px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    background: #d9d9d9;
+    font-size: 20px;
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 5px 7px 5px #3e3e3e;
+}
+
+.button{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+    color: white;
+    background-color: #1a52e2;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    box-shadow: 5px 7px 5px #3e3e3e;
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: #1446c8;
+    box-shadow: 2px 7px 5px #3e3e3e;
+}
+
+.route{
+    display: flex;
+    margin-top: 20px;
+    bottom: 5%;
+    position: absolute;
+    justify-content: center;
+}
+
+.route:hover{
+    transform:scale(1.2);
+}
+
+.route h2{
+    color: #d9d9d9;
+    font-size: 15px;
+    animation: reveal 300ms ease-in-out, reveal-2 600ms ease-in-out;
+    animation-delay: 1s;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+}
+
+@keyframes first-load{
+    0%{
+        transform: translateY(10%);
+    }
+
+    90%{
+        transform: translateY(-5%);
+    }
+
+    100%{transform: translateY(0%);
+
+    }
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes reveal{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes reveal-2{
+    0%{
+        transform: translateY(-10%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.sign-up-MainContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    position: relative;
+    isolation: isolate;
+}
+
+.sign-up-MainContent::after{
+    content: '';
+    background: url('./assets/background3.jpg');
+    opacity: 0.6;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+
+.sign-up-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.sign-up-header h1{
+    color: #d9d9d9;
+    font-size: 25px;
+}
+
+.sign-up-UIDivider{
+    padding: 3px;
+    background: #d9d9d9;
+    width: 85%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.sign-up-field{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.sign-up-label{
+    font-size: 20px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.sign-up-input{
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    border: 0;
+    background: #d9d9d9;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sign-up-button{
+    background-color: #44a593;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+    margin-top: 10px;
+    font-size: 20px;
+    box-shadow: 5px 7px 5px #3e3e3e;;
+}
+
+.sign-up-button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: #6cb9ab;
+    box-shadow: 2px 7px 5px #3e3e3e;
+}
+
+.sign-up-route{
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sign-up-route h2{
+    color: #d9d9d9;
+}
+
+.sign-up-route:hover{
+    transform: scale(1.2);
+}
+
+.sign-up-view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 70%;
+}
+
+.sign-up-view h1{
+    color: #d9d9d9;
+    font-size: 50px;
+}
+
+.account-box{
+    height: 80vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 2px 7px 5px #1a8651;
+    text-shadow: 2px 7px 5px #a31854;
+    animation: reveal 300ms ease-in-out, reveal-2 600ms ease-in-out;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+.account-box::after{
+    content: '';
+    background: url('./assets/background3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+
+.account-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-width: 428px;
+}
+
+.account-box h1{
+    color: white;
+    font-size: 50px;
+}
+
+.account-button{
+    background: rgb(165, 9, 9);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 5%;
+    box-shadow: 2px 7px 5px #cd5e23;
+}
+
+.account-button:hover{
+    transform: scale(1.2);
+}
